@@ -234,3 +234,76 @@ li {
   height: 100%;
   object-fit: cover;
 }
+
+/*----------------*/
+.js-slider__nav {
+  mix-blend-mode: difference !important;
+  background-color: transparent;
+}
+
+.js-slider-bullet {
+  mix-blend-mode: difference !important;
+  background-color: transparent;
+}
+
+.js-slider-bullet__text {
+  mix-blend-mode: multiply !important;
+  background-color: transparent;
+
+  color: rgb(255, 255, 255);
+}
+
+.js-slider-bullet__line {
+  mix-blend-mode: difference !important;
+
+  background-color: rgb(255, 255, 255);
+}
+
+.js-slide__img {
+  transition: 150ms ease-in-out;
+  transition-property: filter;
+}
+
+.js-slide__img:hover {
+  filter: grayscale(100%);
+}
+
+.js-slider div:nth-child(2) img {
+  box-shadow: 0 4px 10px #0a0a0a;
+}
+
+.js-slider div:nth-child(3) img {
+  box-shadow: 0 4px 10px #121212;
+}
+
+.js-slider div:nth-child(4) img {
+  box-shadow: 0 4px 10px #15292b;
+}
+
+.js-slider div:nth-child(5) img {
+  box-shadow: 0 4px 10px #161618;
+}
+
+.js-slider div:nth-child(6) img {
+  box-shadow: 0 4px 10px #181818;
+}
+
+.js-slider div:nth-child(7) img {
+  box-shadow: 0 4px 10px #192734;
+}
+
+.js-slider div:nth-child(8) img {
+  box-shadow: 0 4px 10px #212121;
+}
+
+.js-slider div:nth-child(9) img {
+  box-shadow: 0 4px 10px #212124;
+}
+
+.js-slider div:nth-child(10) img {
+  box-shadow: 0 4px 10px #22303c;
+}
+
+.js-slider div:nth-child(11) img {
+  box-shadow: 0 4px 10px #242526;
+}
