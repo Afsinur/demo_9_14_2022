@@ -65,6 +65,13 @@ class Slider {
       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg",
       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg2.jpg",
       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg3.jpg",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg2.jpg",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg3.jpg",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg2.jpg",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg3.jpg",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg2.jpg",
     ];
 
     this.data = {
