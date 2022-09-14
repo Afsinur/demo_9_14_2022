@@ -55,6 +55,7 @@ class Slider {
     this.inner = this.el.querySelector(".js-slider__inner");
     this.slides = [...this.el.querySelectorAll(".js-slide")];
     this.bullets = [...this.el.querySelectorAll(".js-slider-bullet")];
+    this.nextBTN = [...this.el.querySelectorAll(".next_")];
 
     this.renderer = null;
     this.scene = null;
@@ -212,6 +213,10 @@ class Slider {
         this.changeTexture();
         this.render.bind(this);
         this.state.animating = false;
+
+        this.nextBTN.forEach((el) => {
+          el.removeAttribute("disabled", "");
+        });
       },
     });
 
@@ -405,6 +410,15 @@ class Slider {
     this.renderer.render(this.scene, this.camera);
   }
 
+  nextBTNclicks() {
+    this.nextBTN.forEach((el) => {
+      el.addEventListener("click", () => {
+        el.setAttribute("disabled", "");
+        this.nextSlide();
+      });
+    });
+  }
+
   init() {
     this.setup();
     this.cameraSetup();
@@ -413,6 +427,7 @@ class Slider {
     this.setStyles();
     this.render();
     this.listeners();
+    this.nextBTNclicks();
   }
 }
 
@@ -429,3 +444,5 @@ links.forEach((link) => {
 
 // Init classes
 const slider = new Slider();
+
+//----------------------
