@@ -165,7 +165,7 @@ li {
 .slider__nav {
   position: absolute;
   top: 50%;
-  right: 0;
+  left: 0;
   transform: translateY(-50%);
   z-index: 10;
 }
@@ -262,10 +262,11 @@ li {
 .js-slide__img {
   transition: 150ms ease-in-out;
   transition-property: filter;
+  filter: grayscale(100%);
 }
 
 .js-slide__img:hover {
-  filter: grayscale(100%);
+  filter: grayscale(0%);
 }
 
 .js-slider div:nth-child(2) img {
