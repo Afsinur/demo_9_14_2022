@@ -62,16 +62,16 @@ class Slider {
     this.camera = null;
 
     this.images = [
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg",
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg2.jpg",
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg3.jpg",
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg",
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg2.jpg",
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg3.jpg",
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg1.jpg",
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg2.jpg",
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg3.jpg",
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/58281/bg2.jpg",
+      "img/10/photo-1522920192563-6df902920a8a.avif",
+      "img/10/photo-1540829917886-91ab031b1764.avif",
+      "img/10/photo-1542064923-b4bd6908c745.avif",
+      "img/10/photo-1551192335-592eaff28647.avif",
+      "img/10/photo-1570910814801-cfb1262458b6.avif",
+      "img/10/photo-1589779255718-3c459da9ffeb.avif",
+      "img/10/photo-1591799265444-d66432b91588.avif",
+      "img/10/photo-1597092430872-09a3f4338c60.avif",
+      "img/10/photo-1597092430960-9724170fcbbe.avif",
+      "img/10/photo-1616401014465-0e9f6e4695e0.avif",
     ];
 
     this.data = {
