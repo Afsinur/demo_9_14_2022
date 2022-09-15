@@ -139,6 +139,9 @@ li {
   top: 0;
   right: 0;
   bottom: 0;
+
+  background-color: transparent;
+  mix-blend-mode: difference !important;
 }
 .slider__text {
   position: absolute;
@@ -199,6 +202,8 @@ li {
   right: 0;
   bottom: 0;
   overflow: hidden;
+
+  background-color: transparent;
 }
 .slide__content {
   display: flex;
@@ -209,6 +214,8 @@ li {
   top: 0;
   right: 0;
   bottom: 0;
+
+  background-color: transparent;
 }
 .slide__img {
   position: relative;
@@ -263,6 +270,8 @@ li {
   transition: 150ms ease-in-out;
   transition-property: filter;
   filter: grayscale(100%);
+
+  background-color: transparent;
 }
 
 .js-slide__img:hover {
@@ -310,24 +319,29 @@ li {
 }
 
 .next_ {
+  mix-blend-mode: difference !important;
+
   position: absolute;
   bottom: 0;
   left: 50%;
 
-  transform: translate(100%, -20%);
+  transform: translate(100%, 500%);
 
   border: none;
   border-radius: 5px;
 
-  background-color: rgb(255, 255, 255);
-  padding: 10px 30px;
-
-  box-shadow: 0px 0px 10px 6px rgb(255 255 255 / 25%);
   cursor: pointer;
+
+  background-color: initial;
+
+  transition: 150ms ease-in-out;
+  transition-property: color;
 }
 
-.next_:disabled {
-  background-color: rgb(80, 80, 80);
-  color: #999;
-  cursor: no-drop;
+.next_:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.adjustNxt_ {
+  transform: translate(100%, 200%);
 }

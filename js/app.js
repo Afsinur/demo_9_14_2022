@@ -61,6 +61,7 @@ class Slider {
     this.scene = null;
     this.clock = null;
     this.camera = null;
+    this.nextClickd = null;
 
     this.images = [
       "img/10/photo-1522920192563-6df902920a8a.avif",
@@ -81,6 +82,9 @@ class Slider {
       total: this.images.length - 1,
       delta: 0,
     };
+
+    this.artificial_current = null;
+    this.artificial_next = null;
 
     this.state = {
       animating: false,
@@ -204,15 +208,26 @@ class Slider {
   }
 
   transitionNext() {
+    /*console.log(1);
+    this.state.animating = false;
+
+    this.nextBTN.forEach((el) => {
+      el.removeAttribute("disabled", "");
+    });*/
     TweenMax.to(this.mat.uniforms.dispPower, 2.5, {
-      value: 1,
+      value: !this.nextClickd ? 1 : 0,
       ease: Expo.easeInOut,
       onUpdate: this.render,
       onComplete: () => {
-        this.mat.uniforms.dispPower.value = 0.0;
-        this.changeTexture();
-        this.render.bind(this);
+        if (!this.nextClickd) {
+          this.mat.uniforms.dispPower.value = 0.0;
+          this.changeTexture();
+          this.render.bind(this);
+        }
+
         this.state.animating = false;
+
+        this.nextClickd = false;
 
         this.nextBTN.forEach((el) => {
           el.removeAttribute("disabled", "");
@@ -395,11 +410,23 @@ class Slider {
       this.data.current === this.data.total ? 0 : this.data.current + 1;
     this.data.next =
       this.data.current === this.data.total ? 0 : this.data.current + 1;
+
+    if (!this.nextClickd) {
+      this.artificial_current =
+        this.artificial_current === this.data.total
+          ? 0
+          : this.artificial_current + 1;
+
+      this.artificial_next =
+        this.artificial_current === this.data.total
+          ? 0
+          : this.artificial_current + 1;
+    }
   }
 
   changeTexture() {
-    this.mat.uniforms.texture1.value = this.textures[this.data.current];
-    this.mat.uniforms.texture2.value = this.textures[this.data.next];
+    this.mat.uniforms.texture1.value = this.textures[this.artificial_current];
+    this.mat.uniforms.texture2.value = this.textures[this.artificial_next];
   }
 
   listeners() {
@@ -413,6 +440,7 @@ class Slider {
   nextBTNclicks() {
     this.nextBTN.forEach((el) => {
       el.addEventListener("click", () => {
+        this.nextClickd = true;
         el.setAttribute("disabled", "");
         this.nextSlide();
       });
